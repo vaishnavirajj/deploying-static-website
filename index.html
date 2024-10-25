@@ -1,71 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f2f5;
+        margin: 0;
+      }
+
       .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        max-width: 300px;
-        margin: auto;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        max-width: 350px;
+        margin: 20px;
         text-align: center;
-        font-family: arial;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: #fff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+      }
+
+      .card img {
+        width: 100%;
+        border-bottom: 2px solid #ccc;
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover img {
+        transform: scale(1.05);
+      }
+
+      .card h1 {
+        font-size: 24px;
+        color: #333;
+        margin: 20px 0 5px;
       }
 
       .title {
-        color: grey;
-        font-size: 18px;
+        color: #777;
+        font-size: 16px;
+        margin-bottom: 8px;
       }
 
-      button {
+      .location {
+        color: #333;
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 16px 0;
+      }
+
+      .social-links a {
+        color: #444;
+        font-size: 20px;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: #0073b1; /* LinkedIn color as a default hover */
+        transform: scale(1.2);
+      }
+
+      .button-container {
+        margin: 20px 0;
+      }
+
+      .button-container button {
+        padding: 12px 24px;
         border: none;
         outline: 0;
-        display: inline-block;
-        padding: 8px;
+        background-image: linear-gradient(45deg, #0073b1, #0a66c2);
         color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
         font-size: 18px;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+        width: 80%;
+        transition: background-image 0.3s ease;
       }
 
-      a {
-        text-decoration: none;
-        font-size: 22px;
-        color: black;
-      }
-
-      button:hover,
-      a:hover {
-        opacity: 0.7;
+      .button-container button:hover {
+        background-image: linear-gradient(45deg, #005582, #0a66c2);
       }
     </style>
   </head>
   <body>
-    <h2 style="text-align: center"></h2>
-
     <div class="card">
-      <img src="portfolio.jpg" alt="vaishnavi" style="width: 100%" />
+      <img src="portfolio.jpg" alt="vaishnavi" />
       <h1>Vaishnavi Raj</h1>
-      <p class="title">UttarPradesh</p>
-      <p>India</p>
-      <div style="margin: 24px 0">
+      <p class="title">Uttar Pradesh</p>
+      <p class="location">India</p>
+      <div class="social-links">
         <a href="https://vaishnavi-raj.com/"><i class="fa fa-globe"></i></a>
         <a href="https://t.me/thshelley"><i class="fa fa-telegram"></i></a>
-        <a href="https://twitter.com/vaishnaviraj02"
-          ><i class="fa fa-twitter"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/vaishnavi-raj/"
-          ><i class="fa fa-linkedin"></i
-        ></a>
-        <a href="https://www.facebook.com/vaishnaviraj"
-          ><i class="fa fa-facebook"></i
-        ></a>
+        <a href="https://twitter.com/vaishnaviraj02"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/vaishnavi-raj/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/vaishnaviraj"><i class="fa fa-facebook"></i></a>
       </div>
-      <p><button>Contact</button></p>
+      <div class="button-container">
+        <button>Contact</button>
+      </div>
     </div>
   </body>
 </html>
